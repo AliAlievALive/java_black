@@ -2,14 +2,16 @@ package generics;
 
 public class ParametrizedClass {
     public static void main(String[] args) {
-        Info<String> info = new Info<>("Privet");
-        System.out.println(info);
-        String s = info.getValue();
 
-        Info<Integer> info1 = new Info<>(18);
-        System.out.println(info1);
-        Integer i1 = info1.getValue();
     }
+
+//    public void abc(Info<String> info){
+//        String s = info.getValue();
+//    }
+//
+//    public void abc(Info<Integer> info){
+//        Integer i = info.getValue();
+//    }
 }
 
 class Info<T> {
@@ -26,3 +28,15 @@ class Info<T> {
         return value;
     }
 }
+
+//class Parent {
+//    public void abc(Info<String> info) {
+//        String s = info.getValue();
+//    }
+//}
+//
+//class Child extends Parent {
+//    public void abc(Info<Integer> info) {
+//        Integer i = info.getValue();
+//    }
+//}
