@@ -14,7 +14,7 @@ public class ParameterizedMethod {
 }
 
 class GenMethod {
-    public static <T> T getSecondElement(ArrayList<T> arrayList) {
+    public static <T extends Number> T getSecondElement(ArrayList<T> arrayList) {
         return arrayList.get(1);
     }
 }
