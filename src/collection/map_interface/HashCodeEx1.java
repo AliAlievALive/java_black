@@ -14,17 +14,14 @@ public class HashCodeEx1 {
         map.put(st2, 8.7);
         map.put(st3, 9.2);
         System.out.println(map);
+        System.out.println(map.containsKey(st1));
+        st1.course = 4; // нужно использовать final поля, а то хэш будет изменен
+        System.out.println(map.containsKey(st1));
 
-        Student st4 = new Student("Zaur", "Tregulov", 3);
-        Student st5 = new Student("Igor", "Sidorov", 4);
-//        boolean result = map.containsKey(st4);
-//        System.out.println("result = " + result);
-        System.out.println(st1.hashCode());
-        System.out.println(st5.hashCode());
     }
 }
 
-class Student {
+class Student implements Comparable<Student>{
     String name;
     String surname;
     int course;
@@ -57,6 +54,11 @@ class Student {
     @Override
     public int hashCode() {
         return Objects.hash(name, surname, course);
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return this.name.compareTo(o.name);
     }
 
 //    @Override
