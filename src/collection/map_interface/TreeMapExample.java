@@ -6,7 +6,7 @@ import java.util.TreeMap;
 public class TreeMapExample {
     public static void main(String[] args) {
 //        TreeMap<Student, Double> treeMap = new TreeMap<>();
-//        TreeMap<Student, Double> treeMap2 = new TreeMap<>((o1, o2) -> o1.name.compareTo(o2.name));
+////        TreeMap<Student, Double> treeMap2 = new TreeMap<>((o1, o2) -> o1.name.compareTo(o2.name));
 //
 //        Student st1 = new Student("Ali", "Aliev", 3);
 //        Student st2 = new Student("Zaur", "Tregulov", 1);
@@ -27,14 +27,16 @@ public class TreeMapExample {
 //
 //        System.out.println(treeMap);
 //        System.out.println(treeMap.containsKey(st8));
-//        System.out.println(treeMap.get(7.2));
-//        treeMap.remove(5.8);
+////        System.out.println(treeMap.get(7.2));
+////        treeMap.remove(5.8);
 //        System.out.println(treeMap);
 //        System.out.println(treeMap.descendingMap());
-//        System.out.println(treeMap.tailMap(7.3));
-//        System.out.println(treeMap.headMap(7.3));
+////        System.out.println(treeMap.tailMap(7.3));
+////        System.out.println(treeMap.headMap(7.3));
 //        System.out.println(treeMap.lastEntry());
 //        System.out.println(treeMap.firstEntry());
+
+
         TreeMap<Double, Student> treeMap = new TreeMap<>();
 
         Student st1 = new Student("Ali", "Aliev", 3);
@@ -54,5 +56,7 @@ public class TreeMapExample {
         treeMap.put(9.1, st7);
 
         System.out.println(treeMap);
+        System.out.println(5.8);
+        System.out.println(treeMap.descendingMap());
     }
 }
