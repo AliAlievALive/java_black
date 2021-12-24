@@ -1,4 +1,4 @@
-package collection.nested_classes.inner_class;
+package nested_classes.inner_class;
 
 public class Car {
     String color;

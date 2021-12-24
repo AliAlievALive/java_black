@@ -1,4 +1,4 @@
-package collection.lambda;
+package lambda;
 
 public class Test2 {
     static void def(I i) {

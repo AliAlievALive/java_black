@@ -1,4 +1,4 @@
-package collection.nested_classes;
+package nested_classes;
 
 public class Test {
     static class A {

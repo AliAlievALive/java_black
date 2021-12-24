@@ -1,4 +1,4 @@
-package collection.lambda;
+package lambda;
 
 public class Student {
     String name;
