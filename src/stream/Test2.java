@@ -19,14 +19,15 @@ public class Test2 {
         students.add(st4);
         students.add(st5);
 
-        students.stream()
+        Student student = students.stream()
                 .map(element -> {
                     element.setName(element.getName().toUpperCase());
                     return element;
                 })
                 .filter(element -> element.getSex() == 'f')
                 .sorted((x, y) -> x.getAge() - y.getAge())
-                .forEach(student -> System.out.println(student));
+                .findFirst().get();
+        System.out.println(student);
     }
 }
 
