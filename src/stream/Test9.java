@@ -18,11 +18,6 @@ public class Test9 {
         students.add(st4);
         students.add(st5);
 
-        Optional<Student> min = students.stream().min((x, y) -> x.getAge() - y.getAge());
-        Student student1 = min.orElse(null);
-        System.out.println(student1);
-
-        Student student2 = students.stream().max((x, y) -> x.getAge() - y.getAge()).get();
-        System.out.println(student2);
+        students.stream().filter(student -> student.getAge() > 20).limit(2).forEach(el -> System.out.println(el));
     }
 }
