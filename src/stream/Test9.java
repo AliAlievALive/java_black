@@ -18,6 +18,10 @@ public class Test9 {
         students.add(st4);
         students.add(st5);
 
-        students.stream().filter(student -> student.getAge() > 20).limit(2).forEach(el -> System.out.println(el));
+        students.stream().filter(student -> student.getAge() > 20).forEach(System.out::println);
+        System.out.println("------------------------------------------");
+        students.stream().filter(student -> student.getAge() > 20).limit(2).forEach(System.out::println);
+        System.out.println("------------------------------------------");
+        students.stream().filter(student -> student.getAge() > 20).skip(3).forEach(System.out::println);
     }
 }
