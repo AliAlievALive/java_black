@@ -3,6 +3,7 @@ package stream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class Test9 {
     public static void main(String[] args) {
@@ -18,10 +19,23 @@ public class Test9 {
         students.add(st4);
         students.add(st5);
 
-        students.stream().filter(student -> student.getAge() > 20).forEach(System.out::println);
-        System.out.println("------------------------------------------");
-        students.stream().filter(student -> student.getAge() > 20).limit(2).forEach(System.out::println);
-        System.out.println("------------------------------------------");
-        students.stream().filter(student -> student.getAge() > 20).skip(3).forEach(System.out::println);
+
+        int sum = students.stream().mapToInt(el -> el.getCourse()).sum();
+        System.out.println(sum);
+
+        double avg = students.stream().mapToInt(el -> el.getCourse()).average().getAsDouble();
+        System.out.println(avg);
+
+        List<Integer> courses = students.stream()
+                .mapToInt(student -> student.getCourse())
+                .boxed()
+                .collect(Collectors.toList());
+        System.out.println(courses);
+
+        List<Double> avgGrades = students.stream()
+                .mapToDouble(student -> student.getAvgGrade())
+                .boxed()
+                .collect(Collectors.toList());
+        System.out.println(avgGrades);
     }
 }
