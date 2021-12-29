@@ -1,6 +1,5 @@
-package collection.work_with_files;
+package work_with_files;
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
