@@ -9,10 +9,9 @@ public class FileWriterEx {
                 "Непонятного нет для меня под луной\n" +
                 "Мне известно, что мне ничего не известно!\n" +
                 "Вот последняя правда, открытая мной.\n";
-        String s = "Privet";
 
-        try(FileWriter fileWriter = new FileWriter("FileForWrite.txt", true)) {
-            fileWriter.write(s);
+        try(FileWriter fileWriter = new FileWriter("excluded_files\\FileForWrite.txt", true)) {
+            fileWriter.write(rubai);
             System.out.println("Done!");
         }
     }

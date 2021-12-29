@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class FileReaderEx {
     public static void main(String[] args) throws IOException {
-        try (FileReader reader = new FileReader("FileForWrite.txt")) {
+        try (FileReader reader = new FileReader("excluded_files\\FileForWrite.txt")) {
             int character;
             while ((character = reader.read()) != -1) {
                 System.out.print((char) character);
